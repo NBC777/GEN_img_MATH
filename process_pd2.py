@@ -71,9 +71,6 @@ def pd_info_features(fname_, dir_binary, dir_img,
                      'area': Lista_area})             
   return df4    
 
-       
-
-#Filenames_precandidates, nquartil, #nquartil2, proc1, DIR_MASK
 
 
 def pd_info_objects(Lista_filenames, List_quartiles,

@@ -1,5 +1,5 @@
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'   
+_PATH = '/home/nbc/Documentos/Dataset_/'   
 
 #Parameters:
 size_image =(512,512)  
@@ -7,18 +7,18 @@ Threshold0 = 0.008 # 0.2%
     
 nclass = 6    
       
-VALOR = 100000       
+VALOR = 900000           
 percentile = 30          
 percentile_max = 80         
 
-value_percent= 0.98 #  80%       
-         
-# Given a threshold:       
-X=  500                                                                                       
+value_percent= 0.99 #  80%       
                 
+# Given a threshold:       
+X=  500                                                                                         
+                        
                                               
-Lsamples_min=[5, 5, 5, 10, 3, 5]  
-Lsamples_max =[8, 25, 10, 55, 10, 30]    
+Lsamples_min=[6, 6, 6, 10, 4, 8]  
+Lsamples_max =[10, 25, 10, 55, 10, 30]    
     
 ext_jpg = 'jpg'    
 ext_png = 'png'
@@ -59,9 +59,12 @@ LDIR_LABELS  = [_PATH + LISTA_CLASSES[2*i +1]   for i in range(nclass)]
 
 # images =[img for img in os.listdir(image_path) if img.endswith(".jpg")]  
     
-nome_file_pkl =  TEMP1 + 'info_result_0.pkl'       
+nome_file_pkl =  TEMP1 + 'info_result_0.pkl'  
 
-Lista_mean_bg = [57.916259765625, 53.35888671875, 44.46533203125]
+    
+a1 = 7
+
+Lista_mean_bg = [57.916259765625 - a1, 53.35888671875 -a1, 44.46533203125 -a1]
 Lista_std_bg = [3.10549683948025, 2.2441567203751296, 2.8419069039454388]
 
 mean_std_tuple = list(zip(Lista_mean_bg, Lista_std_bg))

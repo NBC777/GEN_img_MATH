@@ -9,19 +9,14 @@ from multiple_imgs import *
 from process_pd2  import *
   
 ######################    
-        
-#import cv2  
-#import time   
 from ast import literal_eval  
-#from timeit import default_timer as timer 
-#import os     
 
 random.seed(10)
     
 ####################### 
 
            
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
 
   
          
@@ -30,8 +25,7 @@ def  multiples_ann():
     listsx = LoadLists(nome_file_pkl)  
     Lnumber_imgs = listsx['Lnumber_imgs']    
     summm= sum(Lnumber_imgs)      
-    print('Numero total de imgs de todas as classes:>>>',  summm)      
-                
+            
     M= max(Lnumber_imgs)  
 
     pd_fnames1 = making_pd_fn3(TEMP2, M, nclass)

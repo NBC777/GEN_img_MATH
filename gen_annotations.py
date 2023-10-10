@@ -16,7 +16,7 @@ from timeit import default_timer as timer
 
 
         
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
     
         
 
@@ -68,7 +68,6 @@ def  gen_all_masks():
 
       print('Number of images, per class,  generated:', Lnumber_imgs)
       print('Sum of pixels, per class, in generated images:', Lista_sum)      
-
 
 
       Lista_result['Lnumber_imgs']=Lnumber_imgs

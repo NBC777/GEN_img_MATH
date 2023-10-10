@@ -35,13 +35,8 @@ def  interx_(half_1,half_2, dir_lista2x, dir_out, m2x):
         bitwiseAnd = cv2.bitwise_and(img1xx, img2xx)  
         
         if (bitwiseAnd == 0).all():                   
-           
 
-            #bitwiseOr = cv2.bitwise_or(img1, img2)  
             bitwiseOr =  img1 + img2
-            #print('shape de bitwise::>>', bitwiseOr.shape)
-            #print('subarray de biotwiseOr::>>', bitwiseOr[20:24,20:24])
-
             img_pil = Image.fromarray(bitwiseOr.astype('uint8'), mode='P') 
             img_pil.putpalette(palette_from_dict(colors_dict))
             fname_1 = fname1x.replace(".png", "")
@@ -54,8 +49,7 @@ def  interx_(half_1,half_2, dir_lista2x, dir_out, m2x):
             nfile = [fname1x, fname2x]
             Lfn_delete += nfile # imgs1x que se intersectam.     
             Lplot_delete += [filenamex]#img2x que se interwectam;.
-            #print('SI   interseccion')
-                          
+             
         else:  
    
               

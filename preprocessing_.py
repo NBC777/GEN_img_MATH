@@ -54,7 +54,7 @@ def check_format_file(path3, ext_format):#, LABEL_dir):
     return True  
 
      
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
     
 
 def preproc():

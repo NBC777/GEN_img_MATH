@@ -1,7 +1,7 @@
 from utils import *
 from info_prm import *
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
 
 import cv2
  

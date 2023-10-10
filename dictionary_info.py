@@ -2,7 +2,7 @@
 from utils import *
 from info_prm import * 
 
-
+    
   
 
 #####################
@@ -10,26 +10,9 @@ from ast import literal_eval
 ########################
 # vamos criar um novo dictionary com dados dos csvs:
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
     
 from ast import literal_eval
-
-""" 
-
-pd_final_info3 = pd.read_csv(TEMP1 +  'pd_info_objects_final.csv',
-                 #converters={'Filename': literal_eval,    
-                   #'intensity_image': literal_eval,
-                   #          'Nclass': literal_eval,    
-                 #            'area': literal_eval},  
-                 usecols = ['Filename',  'area'] ) 
-
-pd_final_info2 = pd.read_csv(TEMP1 +  'pd_info_objects_final.csv',
-                 converters={'intensity_image': literal_eval,
-                             'Nclass': literal_eval},
-                 usecols = ['Nclass', 'intensity_image'] ) 
-
-
-"""  
 
 
 def new_dict_pd(dir_csv, Lista_):

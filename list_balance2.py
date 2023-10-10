@@ -18,7 +18,7 @@ from process_pd2  import *
      
 print(' Start  main 1.....')
            
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
   
 #  1:      
 # create needed folders:
