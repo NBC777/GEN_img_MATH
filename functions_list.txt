@@ -1,0 +1,33 @@
+1)  balanceo 
+====>   #list_balance2.py
+
+==============>   preprocessing_.py
+######gen_annotations
+2) generação de maskaras:
+=====>  gen_annotations.py
+#####
+3) generação de imgs 1-class:
+=====>   gen_imgs_1class.py
+#####       
+
+4)  generação de multiplas masks (2x3x4x5x6x)
+=====> multiple_annotations.py
+######
+5) generação de images de nclass:
+=====>   gen_imgs_nclasses.py 
+######  
+6) generação imgs 1class  faltantes
+=====>  gen_missing_imgs.py  
+
+#######  até aqui importante
+####
+7) [OPTIONAL]
+Cria  uma tabela pandas:
+======>   build_pd_info.py
+8)  copiar  process  para  Data_generated:
+======>  join_dataset.py 
+9)  statistica do dataset:
+=======>   sts_plots.py  
+    
+
+
