@@ -378,9 +378,9 @@ def  quartiles_x(filenames, dir_,  nclasses,
 def split_filenames_per_class(Listx,nclass):
   new_List = [[] for i in range(nclass)]  
   for fname in Listx:
-    print('fname::>>', fname)
+    #print('fname::>>', fname)
     c = fname.split('.')[0][-1]
-    print('c1::>>', c)  
+    #print('c1::>>', c)  
     #c = int(fname.split('.')[0][-1])
     new_List[int(c)-1] +=[fname]
 

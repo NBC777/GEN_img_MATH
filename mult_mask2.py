@@ -3,7 +3,7 @@ from lista_par import *
 import glob 
   
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
 
       
 def making_pd_fn3(pwd, M, nclass):
@@ -93,8 +93,7 @@ def  XZ0(Num_imgs, value, pd_infox, plot_dir, dir_in):
   grupo de index  en pandas.
   Index_pandas = Lindex        
   """ 
-  print('Dentro de XZ0')         
-    
+
   n_max = max(Num_imgs)
   #k1 = round(value*n_max) 
   k1 = n_max             
@@ -108,7 +107,7 @@ def  XZ0(Num_imgs, value, pd_infox, plot_dir, dir_in):
   new_pd_info.reset_index(inplace=True)
   new_pd_info= new_pd_info.rename(columns = {'index':'IDX'})        
 
-  _PATH = '/home/nbc10/Documentos/Dataset_/'       
+  _PATH = '/home/nbc/Documentos/Dataset_/'       
 
             
   out_a1 = new_pd_info.to_csv(_PATH + 'new_pd_infoXY.csv')   
@@ -149,7 +148,7 @@ def  XZ0(Num_imgs, value, pd_infox, plot_dir, dir_in):
                   
 def  WXZ(value,pd_info, plot_dir,dir_in, nclass,  Num_imgs):  
 
-  print('  Dentro  de  WXZ   function ======')          
+  #print('  Dentro  de  WXZ   function ======')          
   """
   Function that search  multiples interseções de images
   que são interseções na etapa anterior>>>        
@@ -164,7 +163,7 @@ def  WXZ(value,pd_info, plot_dir,dir_in, nclass,  Num_imgs):
 
   X2_ = XZ0(Num_imgs, value, pd_info, plot_dir, dir_in)
 
-  print('Len de Lrm0:>>', len(X2_))
+  #print('Len de Lrm0:>>', len(X2_))
 
   # GENERATE  2X:                     
   X2 = X2_.copy()  

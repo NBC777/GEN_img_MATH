@@ -17,7 +17,7 @@ from ast import literal_eval
 
 # read specific columns of csv file using Pandas
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
     
 from ast import literal_eval
 

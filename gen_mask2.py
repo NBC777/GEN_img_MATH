@@ -20,9 +20,9 @@ def allocation_quadrant(theta, dict_quadrants, bbox_, h,w):
 
   elif a==0 and d==w:
 
-    num_quadrant =3 
+    num_quadrant =3   
     
-  print('Num_quadrante:>>>', num_quadrant)
+  #print('Num_quadrante:>>>', num_quadrant)
 
 
   if theta==90:
@@ -253,7 +253,7 @@ def sub_patchs(pd_i, list_idx, max_tentativas):
 
         z+=1    
           
-      print(scale, theta, x, y, x_final,y_final)
+      #print(scale, theta, x, y, x_final,y_final)
 
 
       seg[:] = cv2.bitwise_xor(seg, p)
@@ -290,7 +290,7 @@ def  generate_masks_n(pd_patch, dir_to_save, SUM_TOTAL, samples_min, samples_max
   i=0             
                    
   while sum < SUM_TOTAL:
-    print('I:>>>>>>>>>>>>>>>>>>>>>>>',i)
+    #print('I:>>>>>>>>>>>>>>>>>>>>>>>',i)
     #background = Image.open(_PATH + 'background.jpg') 
     rnd = random.randint(samples_min, samples_max) 
     index= pd_patch.index.tolist()

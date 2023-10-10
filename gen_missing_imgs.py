@@ -3,34 +3,10 @@ from info_prm import *
 
 from utils import * 
 
-#from gen_mask import *   
-#from multiple_masks import *   
-#from dictionary_info import *
-#from multiple_imgs import *
-#from process_pd2  import *
-#from single_img import *  
-         
-##  Listas_filtradas: Lista_total - Lista_to_remove     
-##  Criando  images masks  sobre listas filtradas:
-## From LDIR_IMGS/LDIR_LABELS to DATAx_2 (para teste - trocar por multiclass_imgs/)
-
 ######################
         
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'
-
-
-
-  
-#  newL = [item for item in lista1 if item not in lista2]
-
-#from ast import literal_eval
-
-#pd_final_info2 = pd.read_csv(TEMP1 +  'pd_info_objects_final.csv',
-#                 converters={'intensity_image': literal_eval,
-#                             'Nclass': literal_eval},
-#                 usecols = ['Nclass', 'intensity_image'] ) 
-  
+_PATH = '/home/nbc/Documentos/Dataset_/'
 
 def completing_imgs():
 

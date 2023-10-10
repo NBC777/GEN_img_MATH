@@ -8,7 +8,7 @@ from PIL import ImageEnhance
 from ast import literal_eval
 #=============================
 
-_PATH = '/home/nbc10/Documentos/Dataset_/'
+_PATH = '/home/nbc/Documentos/Dataset_/'
          
     
 def  generate_imgsZ(pd_dict, mean_std_tuple, pd_i,dir_i, dir_out, M, n):
@@ -19,13 +19,13 @@ def  generate_imgsZ(pd_dict, mean_std_tuple, pd_i,dir_i, dir_out, M, n):
   j :  number of image
   k : number of object in each j 
   """  
-  print('dentro de generate_imgsz')    
+  #print('dentro de generate_imgsz')    
   
   #j =0         
   for j in range(M):# j < M:    
-    print(f"valor  de {M}  e  {j}")
+    #print(f"valor  de {M}  e  {j}")
 
-    print('value j>>>>', j)       
+    #print('value j>>>>', j)       
     size_image = (512,512)   
     h,w = size_image     
     zeros = np.zeros(size_image, dtype='uint8')  
@@ -34,7 +34,7 @@ def  generate_imgsZ(pd_dict, mean_std_tuple, pd_i,dir_i, dir_out, M, n):
 
     row = pd_dict.iloc[j].tolist() 
 
-    print('ROW  final>>>', row) 
+    #print('ROW  final>>>', row) 
     #print('Para cada j:===========================>', j)
     for k in range(len(row[4])): 
 
@@ -105,10 +105,10 @@ def  GEN_IMGS_one_class(nclass, pd_, mean_std_tuple,
   Lista_csv = make_list_file(dir_csv)
      
   for i in range(nclass): 
-    print(f"Class  number :{i}")  
+    #print(f"Class  number :{i}")  
     fname_ = Lista_csv[i]  
     n = int(fname_.split('.')[0][-1])  
-    print('value of n:CLASS:>>>>>>>>>>>>>>>>>>>>>>>>', n)
+    #print('value of n:CLASS:>>>>>>>>>>>>>>>>>>>>>>>>', n)
     pd_dict_i = pd.read_csv(dir_csv + fname_,
                             converters={'LTheta':literal_eval,
                                          'LRESIZE': literal_eval,
@@ -118,17 +118,17 @@ def  GEN_IMGS_one_class(nclass, pd_, mean_std_tuple,
     pd_dict_i.set_index('Lfilename', inplace=True)
     Lista_except_i= Lista_[n-1]   
     pd_dict = gen_imgs_pd_i(pd_dict_i, Lista_except_i)
-    print('lista_index:::>>',  pd_dict.index.tolist())
+    #print('lista_index:::>>',  pd_dict.index.tolist())
     M = len(pd_dict.index.tolist())
 
-    print('value of M>>>', M)
+    #print('value of M>>>', M)
         
     if  M >0: 
       pd_i = pd_[pd_['Nclass']==n] 
-      print('len de pd_i_n', len(pd_i))
-      print('printando um elemento de pd_i:>>>', ) 
+      #print('len de pd_i_n', len(pd_i))
+      #print('printando um elemento de pd_i:>>>', ) 
       dir_i = Ldir_in[n-1]  
-      print('Ldir_in>>>', dir_i)
+      #print('Ldir_in>>>', dir_i)
       dir_out = Ldir_out[n-1]      
       out_ = generate_imgsZ(pd_dict, mean_std_tuple, pd_i, dir_i, dir_out, M, n)
 
