@@ -7,7 +7,7 @@ Threshold0 = 0.008 # 0.2%
     
 nclass = 6    
       
-VALOR = 900000           
+VALOR = 100000               
 percentile = 30          
 percentile_max = 80         
 
@@ -73,4 +73,7 @@ filename_pd_objects = 'pd_info_objects_final.csv'
 
 csv_file_nclass = 'info_targets.csv'
 
-  
+colors_dict = { 0: [0,0,0], 1: [217,11,59], 2:[75, 197, 9], 
+                  3: [195, 179, 90], 4: [12, 5, 136], 
+                  5:[166, 29, 155], 6: [77, 175, 141],
+                  }
