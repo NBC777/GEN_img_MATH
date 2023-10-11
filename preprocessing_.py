@@ -42,7 +42,7 @@ def check_format_file(path3, ext_format):#, LABEL_dir):
     #check if format is correct in folder:#
     print(f"Checking format files in path {path3}")
     for filename in os.listdir(path3):
-        #print('XXX:>>', path3 / filename)
+        #print("XXX":>>, path3 / filename)
         if not filename.endswith(ext_format):  
             print(f" Arquivo {filename} is have no format JPG")          
             os.remove(os.path.join(path3,filename))  
@@ -58,12 +58,7 @@ _PATH = '/home/nbc/Documentos/Dataset_/'
     
 
 def preproc():
-     
-    #    Outliers in the data may causes problems during model fitting (esp. linear models).
-    #    Outliers may inflate the error metrics which give higher 
-    # weights 
-    #to large errors (example, mean squared error, RMSE). 
-                
+
     ######################
     
     print('[INFO]  Start preprocessing.....')
@@ -93,7 +88,7 @@ def preproc():
     print(f'For  percentil value  {percentile}: List of percentile per class :{nquartil}')    
 
     pd_prefinal_analysis = pd_info_objects(Filenames_precandidates, 
-                                        nquartil, #nquartil2, 
+                                        nquartil, 
                                         IMG_dir, DIR_MASK)
 
 
@@ -103,4 +98,11 @@ def preproc():
     return print(" preprocessing was sucessfully")
 
 
+
+
+
+
+#a= preproc()
+
+#print(a)
       
