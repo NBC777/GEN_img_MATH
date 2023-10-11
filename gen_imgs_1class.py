@@ -42,7 +42,7 @@ def gen_imgs_one_class():
 
   # get the start time     
   st = time.time()   
-    
+        
   Lfilename_total =[]  
   for i in range(nclass):
     Lfilename_total.append(make_list_file(LDIR_LABELS[i]))
@@ -58,12 +58,17 @@ def gen_imgs_one_class():
                             Lfilename_total, TEMP2)
 
         
-                    
-  # get the end time
+                         
+  # get the end time  
   et = time.time()         
                 
   # get the execution time
   elapsed_time = et - st
   return print(f'Execution time for generate ALL GRAYSCALE image: {elapsed_time}  seconds')
+
+
+#a3 = gen_imgs_one_class()
+  
+#print(a3)
 
 
