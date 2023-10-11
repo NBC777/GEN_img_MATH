@@ -43,12 +43,12 @@ def pd_info_features(fname_, dir_binary, dir_img,
       Lista_label.append(int(region.label))  
       Lista_bbox.append((region.bbox))
       
-
+       
       #Lista_centroid.append(tuple(region.centroid))
       #Lista_coords.append(np.array(region.coords).tolist())
       Lista_intensity.append(np.array(region.intensity_image).tolist())               
       Lista_area.append(region.area)  
-      Lista_mask.append((np.array(region.image)*1).tolist())
+      Lista_mask.append((np.array(region.image_filled)*1).tolist())
 
       if cond2:
         Lista_type.append("border")
@@ -87,6 +87,5 @@ def pd_info_objects(Lista_filenames, List_quartiles,
     df_info_init = pd.concat([df_info_init, pd_x_class], axis = 0)
         
   return  df_info_init
-
 
 
