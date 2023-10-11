@@ -1,4 +1,3 @@
-
 from utils import * 
 from info_prm import *  
   
@@ -23,8 +22,6 @@ _PATH = '/home/nbc/Documentos/Dataset_/'
   
 def  gen_all_masks():
 
-
-
       pd_final_info2 = pd.read_csv(TEMP1 +  'pd_info_objects_final.csv', 
                              converters={'label':literal_eval,
                                          'intensity_image': literal_eval,
@@ -33,7 +30,7 @@ def  gen_all_masks():
 
 
       st = time.time()     
-
+    
       valor_list = [VALOR]*nclass
 
       data ={} 
@@ -78,6 +75,13 @@ def  gen_all_masks():
 
       return print('[INFO] All labeled images were generated:')
     
+#a2 = gen_all_masks()
+#print(a2)
+  
+
+
+
+     
  
 
 
