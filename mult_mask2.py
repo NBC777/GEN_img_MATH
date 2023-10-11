@@ -272,12 +272,14 @@ def  WXZ(value,pd_info, plot_dir,dir_in, nclass,  Num_imgs):
       os.remove(file_)  
       k1 +=1  
 
-  print('Foram eliminados  {}   arquivos::>>'.format(k1))
-  
-
-  print('FIM  DO   XZ   ======================')      
+  #print('Foram eliminados  {}   arquivos::>>'.format(k1))
 
   return nLfiles1x  
+
+
+       
+
+
 
 
        
