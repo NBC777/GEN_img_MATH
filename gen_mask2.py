@@ -1,5 +1,6 @@
 from utils import *
-from collections import Counter
+from collections import Counter 
+from info_prm import *
 
 import cv2
   
@@ -96,14 +97,14 @@ def  rdm_coord_angle(patch_res, bbox_,h, w, mode_type=None):
   patch_empty = np.empty(patch_res.shape, dtype=int)
   if mode_type =="inner":    
    
-    theta = randrange(360)
+    theta = random.randrange(360)
     patch_res_rot = ndimage.rotate(patch_res, theta)     
     p_h, p_w = patch_res_rot.shape
 
     if (p_h < h) and (p_w < w):  
 
-      x = randrange(h- p_h)  
-      y=randrange(w - p_w)
+      x = random.randrange(h- p_h)  
+      y=random.randrange(w - p_w)
   
       x_final = x+ p_h
   
@@ -180,7 +181,7 @@ def  sorted_index_per_area(pd_patch,index_random_):
          
 def transform_patch_i(p_i,min_scale, max_scale, bbox_, h,w, mode_type="inner"):
 
-    scale = round(uniform(min_scale, max_scale),3)
+    scale = round(random.uniform(min_scale, max_scale),3)
     patch_h, patch_w = p_i.shape  
     resize_patch = cv2.resize(p_i,(int(patch_w * scale),int(patch_h * scale)))
 
@@ -227,8 +228,6 @@ def sub_patchs(pd_i, list_idx, max_tentativas):
       theta =0
       x =0
       y =0
-      x_final =0
-      y_final =0
  
       patch_empty = np.empty(patch.shape, dtype=int) 
 
@@ -364,19 +363,12 @@ def generate_ALL_masks(pd_, SUM_px, nclass, temp_dir,
       path = os.path.join(temp_dir,'info_csv')  #  arreglar  aqui:: 
       os.makedirs(path, exist_ok = True)
       pd_dict.to_csv(temp_dir  + 'selection_objects_class_{}.csv'.format(i+1), index=False)
-      print(f"save file: selection_objects_class_{i+1}.csv")
+      #print(f"save file: selection_objects_class_{i+1}.csv")
           
       pd_empty = None  
-    
+      
   #print('Total execution time:', time.time() - st0, 'seconds')  
   print('All mask images  were generated successfully...')  
-
-  print(' Sai da funcao  generate_ALL_maks>>>>>')
        
   return   Lista_sum, Lnumber_imgs, pd_empty 
 
-
-        
-    
-          
-        
