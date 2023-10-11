@@ -54,3 +54,5 @@ def  multiples_ann():
 
     return print('Mulriplas annotations were done sucessfully')                  
     
+#a5 = multiples_ann()
+#print(a5)
