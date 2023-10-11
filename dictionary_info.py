@@ -53,5 +53,4 @@ def new_dict_pd(dir_csv, Lista_):
    
   return pd_vazio
 
-
     
