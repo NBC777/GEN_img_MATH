@@ -26,12 +26,7 @@ from timeit import default_timer as timer
 #      
           
 #############################
-
-
-# extract  list  flatten to remove:
-#with open('filename_to_remove.pkl', 'rb') as pickle_load:
-#    lista_to_remove_flatten = pickle.load(pickle_load)
-    
+  
 from ast import literal_eval
 
 
@@ -70,7 +65,7 @@ def gen_images_nclasses():
       out4_ = BUILD_X4(_PATH, TEMP2, dirx , pd_intensity, pd_dict, 
                   dir_out, dir_i,s=3)
 
-      # get the end time  
+      # get the end time    
       et = time.time()            
             
       # get the execution time
@@ -80,4 +75,9 @@ def gen_images_nclasses():
             elapsed_time, 'seconds')
       return print("All the n classes imagens  were created ")
 #print(' Main_part5 script  done...')    
+              
+
+#a6 = gen_images_nclasses()
+
+#print(a6)
               
