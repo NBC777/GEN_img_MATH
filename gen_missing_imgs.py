@@ -24,15 +24,12 @@ def completing_imgs():
 
   for i in range(nclass):
     set1 = set(make_list_file(LDIR_LABELS[i]))
-    #print('len de set1:>>', len(set1))
 
     set2 = set(Lista_split02[i])
-    #print('len de set2:>>>', len(set2))
 
     #missL[i] =[item for item in Lfilename_total[i] if item not in Lista_split02[i] ]
     missL_class[i] = list(set1.difference(set2))
-    #print('len de missL1_i que falta per classes:>>>', len(missL_class[i]))
-
+ 
 
   with open(TEMP1 + 'Lmissing_1x_per_class.pkl', 'wb') as pickle_file:
       pickle.dump(missL_class, pickle_file)#, protocol=pickle.HIGHEST_PROTOCOL)
@@ -40,34 +37,54 @@ def completing_imgs():
   out_path_jpg= DATAx_1 #/Dataset_imgs_labels/imgs_/
   out_path_png = DATAx_2 
 
-  #print('Finalizando  a copia dos arquivos  de imgs grayscale:')
+ 
   for i  in range(nclass):
     Lij = missL_class[i]
     for item in Lij:     
 
-      shutil.copy(LDIR_LABELS[i] + item, out_path_png) 
-      #print('PNG files  faltantes  copiados...')           
+      shutil.copy(LDIR_LABELS[i] + item, out_path_png)          
 
       novo_item = item.replace('mask', 'imgs').replace('png', 'jpg')
-      #print('novo item>::', novo_item)
       x = novo_item.split('.')[0]
-      #print('x:', x)
+  
       y = int(x[-1])-1  
-      #print('in_dir', LDIR_IMGS[y] + novo_item)
-      #print('out_dir', out_path_jpg)
     
       shutil.copy(LDIR_IMGS[y] + novo_item, out_path_jpg)  
-      #print('JPG files  faltantes  copiados...')
+  
+    
+  files_imgs = sorted(make_list_file(DATAx_1))
+  files_labels= sorted(make_list_file(DATAx_2))
 
+  if len(files_imgs) ==len(files_labels):
+    try:
+      list_filenames = zip(files_imgs, files_labels)
+      i=0   
+      for item in list(list_filenames):
+        f1, f2 = item
+
+        old_filepath_f1 = os.path.join(DATAx_1, f1)
+        new_name_f1 = 'imgs_' + str(i) + '.' + ext_jpg
+        new_filepath_f1 = os.path.join(DATAx_1, new_name_f1)
+
+        old_filepath_f2 = os.path.join(DATAx_2, f2)
+        new_name_f2 = 'mask_' + str(i) + '.' + ext_png
+        new_filepath_f2 = os.path.join(DATAx_2, new_name_f2)
+
+        os.rename(old_filepath_f1, new_filepath_f1)
+        os.rename(old_filepath_f2, new_filepath_f2)
+        i+=1
+
+    except FileExistsError:
+      print('File not matched.')   
 
   return print('JPG and files  faltantes  foram  copiados...')        
             
-        
-        
-#print('Main_part6 script is done... ')
-          
-    
-        
+
+
+#a10 = completing_imgs()
+
+#print(a10)
+     
 
 
             
