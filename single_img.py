@@ -51,10 +51,12 @@ def  generate_imgsZ(pd_dict, mean_std_tuple, pd_i,dir_i, dir_out, M, n):
 
     ffile_ =pd_dict.index.tolist()[j]  
 
-    #if n==3:
+    #if n==3:  
     mask_ = Image.open(dir_out + ffile_).convert('L')#, "PNG")
-    #else:
-    #  mask_ = imgg    
+
+    mask_  = mask_.point(lambda p: 255 if p > 0 else 0).convert('1')  
+    #else:   
+    #  mask_ = imgg   
 
     background.paste(imgg, (0,0), mask=mask_)           
 
