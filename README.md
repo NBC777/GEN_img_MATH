@@ -4,5 +4,5 @@ In this repository, we show a simply way to generate images and their ground-tru
 
 run:
 
-python main.py
+python  run.py
 
